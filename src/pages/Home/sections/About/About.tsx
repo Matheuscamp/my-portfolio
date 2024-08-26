@@ -3,6 +3,9 @@ import { useState } from 'react'
 import theme from '../../../../theme';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import SchoolIcon from '@mui/icons-material/School';
+import HtmlIcon from '@mui/icons-material/Html';
+import CssIcon from '@mui/icons-material/Css';
+import JavascriptIcon from '@mui/icons-material/Javascript';
 
 
 
@@ -11,7 +14,7 @@ const About = () => {
     const StyledAbout = styled("div")(() => ({
         marginTop: "25px",
         position: 'relative',
-        height: '87vh',
+        height: '54vh',
         width: "100%",
         display: 'flex',
         alignItems: 'top',
@@ -28,12 +31,39 @@ const About = () => {
     const StyledCard = styled("div")(() => ({
         width: "270px",
         height: "140px",
-        border: "1px solid #0b1d28",
+        border: "1px solid #dadada",
         borderRadius: "4px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center"
+    }));
+
+    const StyledSkills = styled("div")(() => ({
+        marginTop: "5px",
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'top',
+        justifyContent: "center",
+        height: "30vh",
+        [theme.breakpoints.up('xs')]: { // <= mobile
+
+        },
+        [theme.breakpoints.up('md')]: { // >= mobile
+
+        },
+
+    }));
+
+    const StyledMiniCard = styled("div")(() => ({
+        width: "270px",
+        height: "50px",
+        border: "1px solid #dadada",
+        borderRadius: "4px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
     }));
 
   return (
@@ -66,6 +96,53 @@ Sou estudante da PUC Minas, cursando Análise e Desenvolvimento de Sistemas no 4
 Se você está interessado em conversar sobre oportunidades de colaboração ou apenas para trocar ideias sobre tecnologia, não hesite em entrar em contato!</Typography>
         </Container>
       </StyledAbout>
+      <StyledSkills>
+        <Container maxWidth="lg">
+            <Typography color="secondary" variant='h2' textAlign="center" >Skills</Typography>
+            <Grid container spacing={2} marginTop={2}>
+                <Grid item xs={3}>
+                    <StyledMiniCard>
+                        <Typography color="secondary" fontFamily="sans-serif" fontSize="1rem" textAlign="center" >HTML</Typography>
+                    </StyledMiniCard>
+                </Grid>
+                <Grid item xs={3}>
+                <StyledMiniCard>
+                        <Typography color="secondary" fontFamily="sans-serif" fontSize="1rem" textAlign="center" >CSS</Typography>
+                    </StyledMiniCard>
+                </Grid>
+                <Grid item xs={3}>
+                <StyledMiniCard>
+                        <Typography color="secondary" fontFamily="sans-serif" fontSize="1rem" textAlign="center" >JavaScript</Typography>
+                    </StyledMiniCard>
+                </Grid>
+                <Grid item xs={3}>
+                <StyledMiniCard>
+                        <Typography color="secondary" fontFamily="sans-serif" fontSize="1rem" textAlign="center" >React.JS</Typography>
+                    </StyledMiniCard>
+                </Grid>
+                <Grid item xs={3}>
+                <StyledMiniCard>
+                        <Typography color="secondary" fontFamily="sans-serif" fontSize="1rem" textAlign="center" >C# | .Net</Typography>
+                    </StyledMiniCard>
+                </Grid>
+                <Grid item xs={3}>
+                <StyledMiniCard>
+                        <Typography color="secondary" fontFamily="sans-serif" fontSize="1rem" textAlign="center" >MySQL</Typography>
+                    </StyledMiniCard>
+                </Grid>
+                <Grid item xs={3}>
+                <StyledMiniCard>
+                        <Typography color="secondary" fontFamily="sans-serif" fontSize="1rem" textAlign="center" >Redes & Internet</Typography>
+                    </StyledMiniCard>
+                </Grid>
+                <Grid item xs={3}>
+                <StyledMiniCard>
+                        <Typography color="secondary" fontFamily="sans-serif" fontSize="1rem" textAlign="center" >Linux & Ferramentas Kali</Typography>
+                    </StyledMiniCard>
+                </Grid>
+            </Grid>
+        </Container>
+      </StyledSkills>
     </>
   )
 }
