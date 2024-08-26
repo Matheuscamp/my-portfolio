@@ -24,6 +24,8 @@ const StyledButton: React.FC<StyledButtonProps> = ({children, onClick}) => {
         gap: "10px"
     }))
 
+    
+
   return (
     <>
         <StyledButton onClick={onClick}>
