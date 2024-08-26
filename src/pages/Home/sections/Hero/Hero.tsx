@@ -4,6 +4,7 @@ import Foto from "../../../../assets/images/Foto_Matheus.jpeg"
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import StyledButton from '../../../../components/StyledButton/StyledButton';
+import theme from '../../../../theme';
 
 const Hero = () => {
 
@@ -14,6 +15,13 @@ const Hero = () => {
         alignItems: 'center',
         overflow: 'hidden',
         zIndex: 1,
+        [theme.breakpoints.up('xs')]: { // <= mobile
+
+        },
+        [theme.breakpoints.up('md')]: { // >= mobile
+
+        },
+
     }));
 
     const VideoBackground = styled("video")(() => ({
@@ -46,13 +54,13 @@ const Hero = () => {
                         <Typography color="primary.contrastText" variant='h3' textAlign="center">I'm a Front-End Developer</Typography>
                         <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                             <Grid item xs={12} md={4} display="flex" justifyContent="center" >
-                                <StyledButton>
+                                <StyledButton onClick={() => console.log("download Butotn")}>
                                     <DownloadIcon />
                                     <Typography>Download CV</Typography>
                                 </StyledButton>
                             </Grid>
                             <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                <StyledButton>
+                                <StyledButton onClick={() => console.log("Contact button")}>
                                     <EmailIcon />
                                     <Typography>Contact me</Typography>
                                 </StyledButton>
