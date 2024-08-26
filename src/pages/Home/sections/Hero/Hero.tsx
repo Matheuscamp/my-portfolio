@@ -40,15 +40,12 @@ const Hero = () => {
                 Seu navegador não suporta a tag de vídeo.
             </VideoBackground>
             <Container maxWidth="lg">
-                <Grid container spacing={2}>
-                    <Grid item xs={12} md={5}>
-                        <StyledImg src={Foto} alt="Matheus Campos" />
-                    </Grid>
-                    <Grid item xs={12} md={7}>
-                        <Typography color="primary.contrastText" variant='h2' textAlign="center">Matheus Campos</Typography>
+                <Grid container spacing={12}>
+                    <Grid item xs={12} md={12}>
+                        <Typography color="primary.contrastText" variant='h2' textAlign="center" >Matheus Campos</Typography>
                         <Typography color="primary.contrastText" variant='h3' textAlign="center">I'm a Front-End Developer</Typography>
-                        <Grid container display="flex" justifyContent="center" spacing={3}>
-                            <Grid item xs={12} md={4} display="flex" justifyContent="center">
+                        <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
+                            <Grid item xs={12} md={4} display="flex" justifyContent="center" >
                                 <StyledButton>
                                     <DownloadIcon />
                                     <Typography>Download CV</Typography>
