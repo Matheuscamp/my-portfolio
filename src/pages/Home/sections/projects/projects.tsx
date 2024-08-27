@@ -9,7 +9,7 @@ import { Height } from '@mui/icons-material';
 const Projects = () => {
 
 
-    const StyledProjects = styled("div")(() => ({ // style section Hero
+    const StyledProjects = styled("div")(() => ({
         position: 'relative',
         height: '130vh',
         display: 'flex',

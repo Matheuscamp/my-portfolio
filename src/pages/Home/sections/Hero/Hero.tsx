@@ -26,7 +26,7 @@ const Hero = () => {
             display: "block"
         },
     }));
-
+    
     const StyledHero = styled("div")(() => ({ // style section Hero
         position: 'relative',
         height: '100vh',
