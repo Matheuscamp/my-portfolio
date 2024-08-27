@@ -3,9 +3,7 @@ import { useState } from 'react'
 import theme from '../../../../theme';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import SchoolIcon from '@mui/icons-material/School';
-import HtmlIcon from '@mui/icons-material/Html';
-import CssIcon from '@mui/icons-material/Css';
-import JavascriptIcon from '@mui/icons-material/Javascript';
+
 
 
 
@@ -14,18 +12,17 @@ const About = () => {
     const StyledAbout = styled("div")(() => ({
         marginTop: "25px",
         position: 'relative',
-        height: '54vh',
         width: "100%",
         display: 'flex',
         alignItems: 'top',
         justifyContent: "center",
+        paddingBottom: "20px", 
         [theme.breakpoints.up('xs')]: { // <= mobile
-
+            height: 'auto', 
         },
         [theme.breakpoints.up('md')]: { // >= mobile
-
+            height: '56vh', 
         },
-
     }));
 
     const StyledCard = styled("div")(() => ({
@@ -40,24 +37,23 @@ const About = () => {
     }));
 
     const StyledSkills = styled("div")(() => ({
-        marginTop: "5px",
+        marginTop: "20px", 
         position: 'relative',
         display: 'flex',
         alignItems: 'top',
         justifyContent: "center",
-        height: "30vh",
         [theme.breakpoints.up('xs')]: { // <= mobile
-
+            height: "auto", 
+            flexDirection: 'column', 
         },
         [theme.breakpoints.up('md')]: { // >= mobile
-
+            height: "30vh", 
         },
-
     }));
 
     const StyledMiniCard = styled("div")(() => ({
-        width: "270px",
-        height: "50px",
+        width: "100%",
+        height: "67px",
         border: "1px solid #dadada",
         borderRadius: "4px",
         display: "flex",
@@ -137,7 +133,7 @@ Se você está interessado em conversar sobre oportunidades de colaboração ou 
                 </Grid>
                 <Grid item xs={3}>
                 <StyledMiniCard>
-                        <Typography color="secondary" fontFamily="sans-serif" fontSize="1rem" textAlign="center" >Linux & Ferramentas Kali</Typography>
+                        <Typography color="secondary" fontFamily="sans-serif" fontSize="1rem" textAlign="center" >Linux & Kali tools</Typography>
                     </StyledMiniCard>
                 </Grid>
             </Grid>
