@@ -5,10 +5,29 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import StyledButton from '../../../../components/StyledButton/StyledButton';
 import theme from '../../../../theme';
 import { ReactTyped, Typed } from 'react-typed';
+import Avatar from "/home/matheus/Projetos/my-portfolio/src/assets/images/Avatar.png"
+
 
 const Hero = () => {
 
-    const StyledHero = styled("div")(() => ({
+    const ImageButtonRight = styled("img")(() => ({ // Estilo avatar lateral inferior direita
+        position: "fixed",
+        bottom: "0",
+        right: "0",
+        marginRight: "20px",
+        zIndex: "1000",
+        width: "8%",
+        cursor: "pointer",
+        [theme.breakpoints.up('xs')]: { // <= mobile
+            
+            display: "none"
+        },
+        [theme.breakpoints.up('md')]: { // >= mobile
+            display: "block"
+        },
+    }));
+
+    const StyledHero = styled("div")(() => ({ // style section Hero
         position: 'relative',
         height: '100vh',
         display: 'flex',
@@ -24,7 +43,7 @@ const Hero = () => {
 
     }));
 
-    const VideoBackground = styled("video")(() => ({
+    const VideoBackground = styled("video")(() => ({ // Style background video, section hero
         position: 'absolute',
         top: 0,
         left: 0,
@@ -35,12 +54,17 @@ const Hero = () => {
         zIndex: -1,
     }));
 
-    const handleDownloadCV = () => {
+    const handleDownloadCV = () => { // Download function
         const link = document.createElement('a');
         link.href = 'public/Currículo Matheus Campos P.pdf'; // Caminho para o arquivo na pasta public
         link.download = 'Curriculo_Matheus_Campos.pdf'; // Nome do arquivo ao fazer download
         link.click();
     };
+
+    const handleEmailClick = () => {
+        window.location.href = 'mailto:matheus.camp32@gmail.com'; // Substitua pelo seu email
+    };
+
     const handleContactMe = () => {
         window.open('https://www.linkedin.com/in/matheus-campos-356085278/', '_blank');
     };
@@ -57,6 +81,7 @@ const Hero = () => {
                 <source src="src/assets/images/mylivewallpapers-com-Lake-Foggy-Mountains-4K.mp4" type="video/mp4" />
                 Seu navegador não suporta a tag de vídeo.
             </VideoBackground>
+            <ImageButtonRight id='avatar' src={Avatar} onClick={handleEmailClick} />
             <Container maxWidth="lg">
                 <Grid container spacing={12}>
                     <Grid item xs={12} md={12}>
