@@ -47,7 +47,7 @@ const About = () => {
             flexDirection: 'column', 
         },
         [theme.breakpoints.up('md')]: { // >= mobile
-            height: "30vh", 
+            height: "38vh",
         },
     }));
 
