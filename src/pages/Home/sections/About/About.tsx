@@ -97,7 +97,7 @@ const About = () => {
                   <Typography color="secondary" fontSize="1rem" textAlign="center">{skill}</Typography>
                 </StyledMiniCard>
               </Grid>
-            ))}
+            ))} 
           </Grid>
         </Container>
       </StyledSkills>
