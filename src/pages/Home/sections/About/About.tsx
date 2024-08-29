@@ -59,7 +59,7 @@ const StyledMiniCard = styled("div")(() => ({
 const About = () => {
   return (
     <>
-      <StyledAbout>
+      <StyledAbout id="about">
         <Container maxWidth="lg">
           <Typography color="secondary" variant='h2' textAlign="center">About me</Typography>
           <Grid container spacing={2} marginTop={3}>
@@ -87,7 +87,7 @@ const About = () => {
           </Typography>
         </Container>
       </StyledAbout>
-      <StyledSkills>
+      <StyledSkills id="skills">
         <Container maxWidth="lg">
           <Typography color="secondary" variant='h2' textAlign="center">Skills</Typography>
           <Grid container spacing={2} marginTop={2}>
