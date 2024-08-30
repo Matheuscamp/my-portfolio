@@ -4,6 +4,11 @@ import Project_1 from "/home/matheus/Projetos/my-portfolio/src/assets/images/Pro
 import Project_2 from "/home/matheus/Projetos/my-portfolio/src/assets/images/Project_2.png";
 import Project_4 from "/home/matheus/Projetos/my-portfolio/src/assets/images/Project_4.png";
 import Project_3 from "/home/matheus/Projetos/my-portfolio/src/assets/images/Project_3.png";
+import StyledButton from '../../../../components/StyledButton/StyledButton';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkIcon from '@mui/icons-material/Link';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 const Projects = () => {
 
@@ -20,7 +25,7 @@ const Projects = () => {
 
   const StyledCard = styled("div")(() => ({
     width: "40rem",
-    height: "35em",
+    height: "auto",
     border: "1px solid #dadada",
     borderRadius: "4px",
     display: "flex",
@@ -41,6 +46,8 @@ const Projects = () => {
     justifyContent: "center",
   }));
 
+
+
   return (
     <>
       <StyledProjects id="projects">
@@ -57,6 +64,20 @@ const Projects = () => {
               <ImageProject src={Project_1} />
               <Typography color="white" fontFamily="sans-serif" pt={2}>This is a website for registering customers on a first-come, first-served basis at a barbershop</Typography>
               <Typography color="white" fontFamily="sans-serif" variant='h6' pb={1}>Technologies: JavaScript, HTML, CSS</Typography>
+              <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
+                            <Grid item xs={12} md={4} display="flex" justifyContent="center" >
+                                <StyledButton onClick={() => window.open('https://github.com/Matheuscamp/Barbearia-Brothers-Lista-Chegada', '_blank')}>
+                                    <GitHubIcon></GitHubIcon>
+                                    <Typography>Code</Typography>
+                                </StyledButton>
+                            </Grid>
+                            <Grid item xs={12} md={4} display="flex" justifyContent="center">
+                                <StyledButton onClick={() => window.open('https://matheuscamp.github.io/Barbearia-Brothers-Lista-Chegada/', '_blank')}>
+                                    <LinkIcon></LinkIcon>
+                                    <Typography>Link</Typography>
+                                </StyledButton>
+                            </Grid>
+                        </Grid>
             </StyledCard>
           </Grid>
           <Grid item xs={12} md={6} display="flex" justifyContent="center">
@@ -66,6 +87,20 @@ const Projects = () => {
               <ImageProject src={Project_2} />
               <Typography color="white" fontFamily="sans-serif" pt={2}>This is a finances management dashboard. The main objective is the user add and delete finances releases, and inform him the balance of the month.</Typography>
               <Typography color="white" fontFamily="sans-serif" variant='h6' pb={1}>Technologies: JavaScript, HTML, CSS</Typography>
+              <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
+                            <Grid item xs={12} md={4} display="flex" justifyContent="center" >
+                                <StyledButton onClick={() => window.open('https://github.com/Matheuscamp/wallet-app-frontend', '_blank')}>
+                                    <GitHubIcon></GitHubIcon>
+                                    <Typography>Code</Typography>
+                                </StyledButton>
+                            </Grid>
+                            <Grid item xs={12} md={4} display="flex" justifyContent="center">
+                                <StyledButton onClick={() => window.open('https://matheuscamp.github.io/wallet-app-frontend/', '_blank')}>
+                                    <LinkIcon></LinkIcon>
+                                    <Typography>Link</Typography>
+                                </StyledButton>
+                            </Grid>
+                        </Grid>
             </StyledCard>
           </Grid>
           <Grid item xs={12} md={6} display="flex" justifyContent="center">
@@ -73,8 +108,22 @@ const Projects = () => {
               <Typography color="white" fontFamily="sans-serif" variant='h4' pb={1}>Projet Supermarket lists</Typography>
               <Typography color="white" fontFamily="sans-serif" pb={1}>Last commit: Sep 6, 2023</Typography>
               <ImageProject src={Project_3} />
-              <Typography color="white" fontFamily="sans-serif" pt={2}>This is an application with the goal of making easier to create supermarket lists.</Typography>
+              <Typography color="white" fontFamily="sans-serif" pt={2}>This application is designed to simplify the process of creating supermarket lists, making it more efficient and convenient for managing your shopping needs.</Typography>
               <Typography color="white" fontFamily="sans-serif" variant='h6' pb={1}>Technologies: React.JS, HTML, CSS, Axios</Typography>
+              <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
+                            <Grid item xs={12} md={4} display="flex" justifyContent="center" >
+                                <StyledButton onClick={() => window.open('https://github.com/Matheuscamp/supermarket-list-frontend', '_blank')}>
+                                    <GitHubIcon></GitHubIcon>
+                                    <Typography>Code</Typography>
+                                </StyledButton>
+                            </Grid>
+                            <Grid item xs={12} md={4} display="flex" justifyContent="center">
+                                <StyledButton onClick={() => window.open('https://github.com/Matheuscamp/supermarket-list-frontend', '_blank')}>
+                                    <VisibilityOff></VisibilityOff>
+                                    <Typography>Link</Typography>
+                                </StyledButton>
+                            </Grid>
+                        </Grid>
             </StyledCard>
           </Grid>
           <Grid item xs={12} md={6} display="flex" justifyContent="center">
@@ -82,8 +131,22 @@ const Projects = () => {
               <Typography color="white" fontFamily="sans-serif" variant='h4' pb={1}>Landing Page Auto Escola Ouro Preto</Typography>
               <Typography color="white" fontFamily="sans-serif" pb={1}>Last commit: Aug 9, 2023</Typography>
               <ImageProject src={Project_4} />
-              <Typography color="white" fontFamily="sans-serif" pt={2}>This is a landing page, for Auto Escola Ouro Preto company.</Typography>
-              <Typography color="white" fontFamily="sans-serif" variant='h6' pb={1}>Technologies: HTML, CSS</Typography>
+              <Typography color="white" fontFamily="sans-serif" pt={2}>This website is used to verify zip codes through the API: https://viacep.com.br, providing users with accurate and up-to-date postal information.</Typography>
+              <Typography color="white" fontFamily="sans-serif" variant='h6' pb={1}>Technologies: JavaScript, HTML, CSS</Typography>
+              <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
+                            <Grid item xs={12} md={4} display="flex" justifyContent="center" >
+                                <StyledButton onClick={() => window.open('https://github.com/Matheuscamp/CheckCEP', '_blank')}>
+                                    <GitHubIcon></GitHubIcon>
+                                    <Typography>Code</Typography>
+                                </StyledButton>
+                            </Grid>
+                            <Grid item xs={12} md={4} display="flex" justifyContent="center">
+                                <StyledButton onClick={() => window.open('https://matheuscamp.github.io/CheckCEP/', '_blank')}>
+                                    <LinkIcon></LinkIcon>
+                                    <Typography>Link</Typography>
+                                </StyledButton>
+                            </Grid>
+                        </Grid>
             </StyledCard>
           </Grid>
         </Grid>

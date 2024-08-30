@@ -36,10 +36,10 @@ const Footer = () => {
         <>
             <StyledFooter>
                 <StyledIcons>
-                    <GitHubIcon />
-                    <LinkedInIcon />
-                    <EmailIcon />
-                    <InstagramIcon />
+                    <GitHubIcon onClick={() => window.open('https://github.com/Matheuscamp', '_blank')} />
+                    <LinkedInIcon onClick={() => window.open('https://www.linkedin.com/in/matheus-campos-356085278/', '_blank')}  />
+                    <EmailIcon onClick={() => window.open('mailto:matheus.camp32@gmail.com', '_blank')}  />
+                    <InstagramIcon onClick={() => window.open('https://www.instagram.com/theus_camposp/', '_blank')}  />
                 </StyledIcons>
                 <Typography color="#0b1d28" fontFamily="sans-serif">© 2024 Matheus Campos - All rights reserved</Typography>
             </StyledFooter>
