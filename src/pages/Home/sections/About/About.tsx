@@ -30,7 +30,7 @@ const StyledCard = styled("div")(() => ({
 }));
 
 const StyledSkills = styled("div")(() => ({
-  marginTop: "20px",
+  marginTop: "10px",
   position: 'relative',
   display: 'flex',
   alignItems: 'top',
@@ -41,7 +41,7 @@ const StyledSkills = styled("div")(() => ({
     flexDirection: 'column',
   },
   [theme.breakpoints.up('md')]: {
-    height: "30vh",
+    height: "43vh",
   },
 }));
 
@@ -91,7 +91,7 @@ const About = () => {
         <Container maxWidth="lg">
           <Typography color="secondary" variant='h2' textAlign="center">Skills</Typography>
           <Grid container spacing={2} marginTop={2}>
-            {['HTML', 'CSS', 'JavaScript', 'React.JS', 'C# | .Net', 'MySQL', 'Redes & Internet', 'Linux & Kali tools'].map(skill => (
+            {['HTML', 'CSS', 'JavaScript', 'React.JS', 'C# | .Net', 'MySQL', 'Redes & Internet', 'Linux & Kali tools' , 'WordPress' , 'Git & GitHub' , 'Excel & Power BI' , 'Advanced English'].map(skill => (
               <Grid item xs={3} key={skill}>
                 <StyledMiniCard>
                   <Typography color="secondary" fontSize="1rem" textAlign="center">{skill}</Typography>
