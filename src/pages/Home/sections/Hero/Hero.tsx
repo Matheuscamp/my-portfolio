@@ -61,10 +61,6 @@ const Hero = () => {
         link.click();
     };
 
-    const handleEmailClick = () => {
-        window.location.href = 'mailto:matheus.camp32@gmail.com'; // Substitua pelo seu email
-    };
-
     const handleContactMe = () => {
         window.open('https://www.linkedin.com/in/matheus-campos-356085278/', '_blank');
     };
@@ -81,7 +77,6 @@ const Hero = () => {
                 <source src="src/assets/images/mylivewallpapers-com-Lake-Foggy-Mountains-4K.mp4" type="video/mp4" />
                 Seu navegador não suporta a tag de vídeo.
             </VideoBackground>
-            <ImageButtonRight id='avatar' src={Avatar} onClick={handleEmailClick} />
             <Container maxWidth="lg">
                 <Grid container spacing={12}>
                     <Grid item xs={12} md={12}>
